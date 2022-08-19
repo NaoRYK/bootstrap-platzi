@@ -7,6 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
     <link rel="stylesheet" href="./style.css">
   </head>
   <body data-bs-spy="scroll" data-target="#navbar">
@@ -23,19 +29,19 @@
               <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="#carouselExampleIndicators">La conferencia</a>
+                    <a id="item-one" class="nav-link " aria-current="page" href="#carouselExampleIndicators">La conferencia</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#speakers">Los oradores</a>
+                    <a id="item-two" class="nav-link" href="#speakers">Los oradores</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#place-time">El lugar y la fecha</a>
+                    <a id="item-three" class="nav-link" href="#place-time">El lugar y la fecha</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#convertirse-orador">Conviertete en orador</a>
+                    <a id="item-four" class="nav-link" href="#convertirse-orador">Conviertete en orador</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-platzi" href="#" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar Tickets</a>
+                    <a id="item-five" class="nav-link text-platzi" href="#" data-bs-toggle="modal" data-bs-target="#modalCompra">Comprar Tickets</a>
                   </li>
 
                 </ul>
@@ -96,14 +102,16 @@
           <div class="row text-center">
             <div class="col  text-uppercase"></div>
             <small style="font-size:20px;;">Conoce a los</small>
-            <h1 style="">Oradores</h1>
+            <h1 >Oradores</h1>
           </div>
           
           <!--filas tarjetas-->
           <div class="row">
             <div class="col-md-6 col-lg-4 col-sm-12 mb-4" >
-              <div class="card"">
-                <img src="./Images/John_Freddy_Vega_en_la_PlatziConf_2015.jpg" class="card-img-top" id="amu" alt="Foto de amu">
+              <div class="card">
+                <div class="contenedor-img">
+                  <img src="./Images/John_Freddy_Vega_en_la_PlatziConf_2015.jpg" class="card-img-top" id="amu" alt="Foto de amu">
+                </div>
                 <div class="card-body">
                   <div class="badges ,b">
                     <span  class="badge bg-warning text-light" style="background-color: #6f42c1 !important;">Bootstrap</span>
@@ -118,7 +126,9 @@
             </div> 
             <div class="col-md-6 col-lg-4 col-sm-12 mb-4 " >
               <div class="card">
-                <img src="./Images/leonidas.jpeg" class="card-img-top" id="nao" alt="Foto de nao">
+                <div class="contenedor-img">
+                  <img src="./Images/leonidas.jpeg" class="card-img-top" id="nao" alt="Foto de nao">
+                </div>
                 <div class="card-body">
                   <div class="badges ,b">
                     <span class="badge bg-danger text-light">HTML5</span>
@@ -132,8 +142,10 @@
               </div>
             </div> 
             <div class="col-md-6 col-lg-4 col-sm-12  mb-4" >
-              <div class="card"">
-                <img src="./Images/sacha.jpg" class="card-img-top" id="Igna" alt="Foto de igja">
+              <div class="card">
+                <div class="contenedor-img">
+                 <img src="./Images/sacha.jpg" class="card-img-top" id="Igna" alt="Foto de igja">
+                </div>
                 <div class="card-body">
                   <div class="badges ,b">
                     <span class="badge bg-warning text-dark">Javascript</span>
@@ -165,16 +177,20 @@
         <div class="container-fluid bg-dark text-light">
 
           <div class="row ">
-            <div class="col-12 col-md-6 px-0">
+            <div class="col-12 col-md-6 px-0 wow slideInLeft">
               <img class="img-fluid"src="./Images/honolulu.jpg" alt="Isla">
             </div>
             <div class="col-12 col-md-6 pt-2 text-center text-md-left text-lg-center mt-5 ">
-              <h1 class="">Honolulú - Octubre 2023</h1>
-              <p class="d-none  d-md-block h5 text-lg-center"style="">Honolulú​ es la capital y localidad más grande del estado de Hawái, en los Estados Unidos.​  es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condadla o consolidada que cubre toda la isla.
-                En hawaiano, "Honolulu" significa "bahía resguardada" o "lugar de resguardo". Se dice que antiguamente se llamaba Kou, el nombre de un distrito que abarca aproximadamente el área desde Nuuanu Avenue a Alakea Street y de Hotel Street a Queen Street, y que es el corazón del actual distrito del centro.
-              </p>
-              <div class="d-flex d-md-block justify-content-center">
-                <a class="btn btn-outline-success mt-2 mb-4" href="https://es.wikipedia.org/wiki/Honolulu">Conocé mas</a>
+              <div class="wow fadeInLeft">
+               <h1 class="">Honolulú - Octubre 2023</h1>
+             </div>
+             <div class="wow fadeInLeft">
+                <p class="d-none  d-md-block h5 text-lg-center"style="">Honolulú​ es la capital y localidad más grande del estado de Hawái, en los Estados Unidos.​  es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condadla o consolidada que cubre toda la isla.
+                  En hawaiano, "Honolulu" significa "bahía resguardada" o "lugar de resguardo". Se dice que antiguamente se llamaba Kou, el nombre de un distrito que abarca aproximadamente el área desde Nuuanu Avenue a Alakea Street y de Hotel Street a Queen Street, y que es el corazón del actual distrito del centro.
+                </p>
+             </div>
+              <div class="d-flex d-md-block justify-content-center wow fadeInUpBig">
+                <a class="btn btn-platzi mt-2 mb-4" href="https://es.wikipedia.org/wiki/Honolulu">Conocé mas</a>
               </div>
               
             </div>
